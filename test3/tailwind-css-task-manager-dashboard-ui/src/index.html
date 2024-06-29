@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.15/tailwind.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <link rel="icon" href="./favicon.PNG" />
+  <header
+    class="header sticky top-0 bg-white shadow-md flex items-center justify-between px-8 py-02"
+  >
+    <!-- logo -->
+    <span
+      style="
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 40px;
+      "
+    >
+      <a href="">
+        <img src="./favicon.PNG" style="float: left" />
+        Minda</a
+      >
+    </span>
+  </header>
+  <!-- nav -->
+  <aside
+    class="flex flex-col w-64 h-screen px-4 py-8 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700"
+  >
+    <div
+      class="flex flex-col items-center -mx-2"
+      style="border-bottom: solid 3px black"
+    >
+      <img class="object-cover w-24 h-24 mx-2" src="./favicon.PNG" />
+      <h4 class="mx-2 mt-2 font-medium text-gray-800 dark:text-gray-200">
+        Hong
+      </h4>
+      <p
+        class="mx-2 mb-3 mt-1 text-sm font-medium text-gray-600 dark:text-gray-400"
+      >
+        test@example.com
+      </p>
+    </div>
+    <div class="relative mb-3">
+      <h6 class="mb-0">
+        <button
+          class="relative flex items-center w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500"
+          data-collapse-target="animated-collapse-1"
+        >
+          <span>모아보기</span>
+          <i
+            class="absolute right-0 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"
+          ></i>
+        </button>
+      </h6>
+      <div
+        data-collapse="animated-collapse-1"
+        class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+      >
+        <div class="p-4 text-sm leading-normal text-blue-gray-500/80">
+          We're not always in the position that we want to be at. We're
+          constantly growing. We're constantly making mistakes. We're constantly
+          trying to express ourselves and actualize our dreams.
+        </div>
+      </div>
+    </div>
+    <div class="relative mb-3">
+      <h6 class="mb-0">
+        <button
+          class="relative flex items-center w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500"
+          data-collapse-target="animated-collapse-2"
+        >
+          <span>카테고리</span>
+          <i
+            class="absolute right-0 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"
+          ></i>
+        </button>
+      </h6>
+      <div
+        data-collapse="animated-collapse-2"
+        class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+      >
+        <div class="p-4 text-sm leading-normal text-blue-gray-500/80">
+          We're not always in the position that we want to be at. We're
+          constantly growing. We're constantly making mistakes. We're constantly
+          trying to express ourselves and actualize our dreams.
+        </div>
+      </div>
+    </div>
+  </aside>
+  <body class="bg-gray-100">
+    <div class="container mx-auto my-10" style="position: fixed; top: 50px">
+      <h1 class="text-center text-3xl font-semibold mb-4">To Do List</h1>
+      <div class="md:w-1/2 mx-auto">
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <form id="todo-form">
+            <div class="flex mb-4">
+              <input
+                type="text"
+                class="w-full px-4 py-2 mr-2 rounded-lg border-gray-300 focus:outline-none focus:border-blue-500"
+                id="todo-input"
+                placeholder="Add new task"
+                required
+              />
+              <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              >
+                Add
+              </button>
+            </div>
+          </form>
+          <ul id="todo-list">
+            <!-- Tasks will be added here dynamically -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- from cdn -->
+  <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
+  <script src="./index.js"></script>
+</html>

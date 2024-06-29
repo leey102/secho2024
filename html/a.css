@@ -1,0 +1,27 @@
+.highlight {
+  background-color: yellow;
+}
+.highlight + input {
+  background-color: green;
+}
+input#num + input {
+  margin-left: 20px;
+}
+#header {
+  font-size: 64px;
+}
+nav ul {
+  list-style-type: none;
+}
+
+.white {
+  color: white;
+}
+
+.red {
+  color: red;
+}
+
+.fav-color {
+  color: #ff88aa;
+}

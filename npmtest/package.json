@@ -1,0 +1,17 @@
+{
+  "name": "npmtest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "gimjs211459": "^0.1.0-beta.1",
+    "leyjs": "^0.1.0-beta.1"
+  }
+}

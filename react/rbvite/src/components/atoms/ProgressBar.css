@@ -1,0 +1,39 @@
+.progress-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.progress-bar-container {
+  flex: 1;
+  margin: 0 5px;
+  position: relative;
+}
+
+.progress-bar {
+  height: 20px;
+  background-color: #f0f0f0;
+  transition: width 0.3s ease;
+  cursor: pointer;
+}
+
+.progress-bar.completed {
+  background-color: #4caf50;
+}
+
+.step-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.progress-bar-container:first-child .progress-bar {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.progress-bar-container:last-child .progress-bar {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
