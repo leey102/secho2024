@@ -15,6 +15,7 @@ function App() {
       </SessionProvider>
       <div className="border-2 border-red-300 p-3">
         <h1>count is {count}</h1>
+
         <Button text={<FaPlus />} onClick={() => plusCount()} />
         <Button text={<FaMinus />} onClick={() => minusCount(2)} />
       </div>

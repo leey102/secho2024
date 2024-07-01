@@ -15,7 +15,6 @@ import { useCount } from "../hooks/counter-context";
 import Hello from "./Hello";
 import { useSession } from "../hooks/session-context";
 import clsx from "clsx";
-import ProgressBar from "./atoms/ProgressBar";
 
 export default function My() {
   const {
@@ -203,7 +202,6 @@ export default function My() {
             className="mt-5"
           />
         )}
-        <ProgressBar />
       </div>
 
       <SampleAtoms />
