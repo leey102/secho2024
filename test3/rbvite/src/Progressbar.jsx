@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 export default function Progressbar({ total, check }) {
-  const sum = (check / total) * 100;
+  const sum = Number((check / total) * 100).toFixed(1);
   return (
     <>
       <div className="relative mb-5">
