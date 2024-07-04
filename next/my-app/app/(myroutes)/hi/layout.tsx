@@ -1,7 +1,7 @@
 'use client';
 
-import { TIMES } from '@/utils/route-utils';
 import Link from 'next/link';
+import { TIMES } from '@/lib/route-utils';
 
 export default function HiLayout({
   children,
