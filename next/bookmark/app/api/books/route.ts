@@ -1,10 +1,13 @@
+import { auth } from '@/lib/auth';
 import { execute, query } from '@/lib/db';
 import { Book } from '@/types';
 import { RowDataPacket } from 'mysql2';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(req: NextRequest) {
-  const { title, owner, clickdel } = await req.json();
+  const { title, clickdel } = await req.json();
+  const session = await auth();
+  const owner = session?.user?.id;
   const rows = await execute(
     'insert into Book(title, owner, clickdel) values(?,?,?)',
     [title, owner, clickdel]
@@ -20,8 +23,10 @@ export async function POST(req: NextRequest) {
 
 // book list for login user
 export async function GET(req: NextRequest) {
+  const session = await auth();
+  console.log('🚀 books - session:', session);
   const { searchParams } = req.nextUrl;
-  const userId = searchParams.get('userId');
+  const userId = searchParams.get('userId') || session?.user?.id;
   // console.log('🚀  userId:', userId);
   // const conn = await mysql.createConnection(config);
   // const conn = await pool.getConnection();
